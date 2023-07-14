@@ -239,7 +239,7 @@
     bottom: -13px;
     left: calc(25% - 13px);
     background: var(--dark);
-    border: 10px solid #FFFFFF;
+    border: 10px solid #fafafa;
     border-radius: 28px;
 }
 
@@ -272,7 +272,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFFFFF;
+    color: #fafafa;
     background: var(--primary);
     border-radius: 55px;
     box-shadow: 0 0 45px rgba(0, 0, 0, .15);
@@ -282,7 +282,7 @@
 
 .product-carousel .owl-nav .owl-prev:hover,
 .product-carousel .owl-nav .owl-next:hover {
-    background: #FFFFFF;
+    background: #fafafa;
     color: var(--primary);
 }
 
@@ -303,7 +303,7 @@
     border: none;
     outline: none !important;
     padding: 28px 30px 30px 38px;
-    background: #FFFFFF;
+    background: #fafafa;
 }
 
 .btn-play:before {
@@ -316,7 +316,7 @@
     display: block;
     width: 120px;
     height: 120px;
-    background: #FFFFFF;
+    background: #fafafa;
     border-radius: 100%;
     animation: pulse-border 1500ms ease-out infinite;
 }
@@ -331,7 +331,7 @@
     display: block;
     width: 120px;
     height: 120px;
-    background: #FFFFFF;
+    background: #fafafa;
     border-radius: 100%;
     transition: all 200ms;
 }
@@ -380,7 +380,7 @@
     z-index: 999;
     font-size: 30px;
     font-weight: normal;
-    color: #FFFFFF;
+    color: #fafafa;
     background: #000000;
     opacity: 1;
 }
@@ -431,7 +431,7 @@
     margin: 0 auto;
     max-width: 600px;
     text-align: center;
-    background: #FFFFFF;
+    background: #fafafa;
     border: 30px solid var(--primary);
 }
 
@@ -505,5 +505,48 @@
 }
 
 .copyright a:hover {
-    color: #FFFFFF !important;
+    color: #fafafa !important;
+}
+
+/*** Team ***/
+.team-item img {
+    position: relative;
+    top: 0;
+    transition: .5s;
+}
+
+.team-item:hover img {
+    top: -30px;
+}
+
+.team-item .team-text {
+    position: relative;
+    height: 100px;
+    transition: .5s;
+}
+
+.team-item:hover .team-text {
+    margin-top: -60px;
+    height: 160px;
+}
+
+.team-item .team-text .team-social {
+    opacity: 0;
+    transition: .5s;
+}
+
+.team-item:hover .team-text .team-social {
+    opacity: 1;
+}
+
+.team-item .team-social .btn {
+    display: inline-flex;
+    color: var(--primary);
+    background: #fafafa;
+    border-radius: 40px;
+}
+
+.team-item .team-social .btn:hover {
+    color: #fafafa;
+    background: var(--primary);
 }
