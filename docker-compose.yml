@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  server-web:
+    image: nginx:latest
+    container_name: server-web
+    ports:
+      - "7000:80"
+    volumes:
+      - .:/usr/share/nginx/html
