@@ -547,3 +547,6 @@
     color: #fafafa;
     background: var(--primary);
 }
+#about h2 {
+    font-size: 20px;
+}
