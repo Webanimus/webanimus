@@ -1,6 +1,13 @@
 #!/bin/bash
 
-# Assurez-vous que cwebp est installé
+# On vérifie que cwebp est installé
+cwebp -version &> /dev/null
+if [ $? -ne 0 ]; then
+    echo "cwebp n'est pas installé. Veuillez l'installer avant de continuer."
+    exit 1
+else
+    echo "cwebp est installé"
+fi
 
 # Chemin vers le dossier contenant les images à convertir
 input_folder="./img"
@@ -15,12 +22,14 @@ for file in "$input_folder"/*; do
         
         # On supprime l'image originale
         rm "$file"
+
+        # Get file basename
+        filename=$(basename -- "$file")
         
         # On remplace le nom de l'image dans le fichier index.html
-        sed -i "s/$file/${file%.*}.webp/g" index.html
+        # echo "s/$filename/${filename%.*}.webp/g"
+        sed -i "" "s/$filename/${filename%.*}.webp/g" index.html
     fi
-
-
     
 done
 
