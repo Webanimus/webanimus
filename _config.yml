@@ -1,0 +1,6 @@
+exclude:
+  - .gitignore
+  - README.md
+  - docker-compose.yml
+  - webp.sh
+
