@@ -4,14 +4,24 @@
 
 # Chemin vers le dossier contenant les images à convertir
 input_folder="./img"
-extention="jpg"
 
-# Boucle pour convertir toutes les images jpg en webp dans le dossier
-for file in "$input_folder"/*.$extention; do
-    if [ -f "$file" ]; then
-        cwebp "$file" -o "${file%.$extention}.webp"
-        rm "$file"  # Suppression de l'image jpg d'origine
+# Boucle pour convertir toutes les images non converties
+for file in "$input_folder"/*; do
+    extention="${file##*.}"
+
+    # Si l'extention est différente de webp, on convertit l'image
+    if [ "$extention" != "webp" ]; then
+        cwebp -q 80 "$file" -o "${file%.*}.webp"
+        
+        # On supprime l'image originale
+        rm "$file"
+        
+        # On remplace le nom de l'image dans le fichier index.html
+        sed -i "s/$file/${file%.*}.webp/g" index.html
     fi
+
+
+    
 done
 
 echo "Conversion et suppression terminées"
