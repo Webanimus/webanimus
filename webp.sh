@@ -4,7 +4,7 @@
 
 # Chemin vers le dossier contenant les images à convertir
 input_folder="./img"
-extention="jpg"
+extention="png"
 
 # Boucle pour convertir toutes les images jpg en webp dans le dossier
 for file in "$input_folder"/*.$extention; do
