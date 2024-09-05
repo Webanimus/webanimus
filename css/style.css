@@ -92,7 +92,7 @@
 }
 
 .navbar .navbar-brand {
-    width: 100px;
+    width: 90px;
 }
 
 .navbar .navbar-nav .nav-link {
@@ -117,11 +117,13 @@
     vertical-align: middle;
     margin-left: 8px;
 }
+.dark-blue {
+    background-color: #030016;
+}
 
 @media (max-width: 991.98px) {
     .navbar .navbar-brand {
-        width: 126px;
-        height: 100px;
+        width: 100px;
     }
 
     .navbar .navbar-nav .nav-link {
@@ -182,15 +184,16 @@
 }
 
 @media (max-width: 768px) {
-    #header-carousel .carousel-item {
+    .carousel-item {
         position: relative;
         min-height: 450px;
     }
 
-    #header-carousel .carousel-item img {
+    .carousel-item img {
         position: absolute;
+        top: 25%;
+
         width: 100%;
-        height: 100%;
         object-fit: cover;
     }
 }
