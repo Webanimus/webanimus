@@ -435,8 +435,8 @@
 
 /*** Testimonial ***/
 .testimonial {
-    background : linear-gradient(rgba(3, 0, 22, .85), rgba(3, 0, 22, .85)), url(../img/testimonial-bg.webp) center center no-repeat;
-    background-size: cover;
+    /* background : linear-gradient(rgba(3, 0, 22, .85), rgba(3, 0, 22, .85)), url(../img/testimonial-bg.webp) center center no-repeat; */
+    /* background-size: cover; */
 }
 
 .testimonial-item {
